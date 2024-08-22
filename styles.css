@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.container {
+    margin-top: 100px;
+    
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.service h2 {
+    font-size: 60px;
+    margin: 0px 0 10px 0;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.service p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.service .text-content {
+    padding: 10px;
+    width: 100%;
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+/* Estilo específico para el párrafo del servicio */
+.digital_print .highlighted-text {
+    background-color: #ffe6f0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.digital_offset .highlighted-text {
+    background-color: #ffffcc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service.wrap .highlighted-text {
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service.digital_design .highlighted-text {
+    background-color: #ffe6e6;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service.signs .highlighted-text {
+    background-color: #ffffcc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service.merch .highlighted-text {
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.service .image-content {
+    width: 70%;
+    text-align: right;
+    margin: 0;
+}
+
+.service .image-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.service button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    margin: 0px;
+}
+
+/* Reglas específicas para cada servicio, en el orden que aparecen en el HTML */
+.service.digital_print {
+    
+    flex-direction: row; /* Imagen a la izquierda */
+}
+
+.service.digital_print .image-content img {
+    transform: translateX(-50px); /* Ajuste de posición específico */
+}
+
+.service.digital_offset {
+    flex-direction: row-reverse; /* Imagen a la derecha */
+}
+
+.service.digital_offset .image-content img{
+    transform: translateX(20px);
+}
+
+.service.wrap {
+    flex-direction: row; /* Imagen a la izquierda */
+}
+
+.service.wrap .image-content img {
+    transform: translateX(-19px); /* Ajuste de posición específico */
+}
+
+.service.digital_design {
+    flex-direction: row; /* Imagen a la izquierda */
+    margin-bottom: 90px;  /* Aumenta el margen inferior */
+}
+
+.service.digital_design .image-content img {
+    transform: translateX(0px); /* Ajuste de posición específico */
+    width: 100%;
+    text-align: right;
+    margin-top: 30px;  /* Aumenta el margen superior */
+    margin-bottom: 30px;  /* Aumenta el margen inferior */
+}
+
+.service.signs {
+    flex-direction: row-reverse; /* Imagen a la derecha */
+
+}
+
+.service.signs .image-content img {
+   /*  transform: translateX(-20px); Ajuste de posición específico */
+   margin-top: 30px;
+}
+
+.service.merch {
+    flex-direction: row-reverse; /* Imagen a la derecha */
+}
+
+.service.merch .image-content img {
+    transform: translateX(10px); /* Ajuste de posición específico */
+}
+
+/* Servicios con texto alineado a la derecha */
+.service.digital_print .text-content,
+.service.wrap .text-content,
+.service.signs .text-content {
+    text-align: right;
+}
+
+.service.digital_print button,
+.service.wrap button,
+.service.signs button {
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+}
+
+/* Servicios con texto alineado a la izquierda */
+.service.digital_offset .text-content,
+.service.digital_design .text-content,
+.service.merch .text-content {
+    text-align: left;
+}
+
+.service.digital_offset button,
+.service.digital_design button,
+.service.merch button {
+    margin-right: auto; /* Empuja el botón hacia la izquierda */
+}
+
+/* Media Query para tablets y pantallas más pequeñas */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service .text-content,
+    .service .image-content {
+        width: 100%;
+        text-align: left;
+    }
+
+    .service .image-content {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .service .text-content {
+        padding: 20px 10px;
+    }
+
+    .service .image-content img {
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+}
+
+/* Media Query para teléfonos móviles */
+@media (max-width: 480px) {
+    .service h2 {
+        font-size: 20px;
+    }
+
+    .service p {
+        font-size: 12px;
+    }
+
+    .service button {
+        width: 100%;
+        padding: 10px;
+    }
+}
